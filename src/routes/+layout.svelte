@@ -1,6 +1,6 @@
 <script lang="ts">
 	// The ordering of these imports is critical to your app working properly (theme, styles, app.postcss)
-	import '@skeletonlabs/skeleton/themes/theme-hamlindigo.css'
+	import '@skeletonlabs/skeleton/themes/theme-crimson.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
 
@@ -15,7 +15,7 @@
 	}
 </script>
 
-<Drawer>
+<Drawer background="bg-secondary-500 md:bg-primary-500">
 	<h2 class="p-4">Navigation</h2>
 	<hr />
 	<Navigation />
@@ -23,8 +23,8 @@
 
 <AppShell slotSidebarLeft="bg-surface-500/5 w-0 lg:w-64">
 	<svelte:fragment slot="header">
-		<AppBar
-			><svelte:fragment slot="lead">
+		<AppBar background="bg-primary-500 opacity-90" fixed="top" sticky="top" shadow="shadow-xl">
+			<svelte:fragment slot="lead">
 				<div class="flex items-center">
 					<button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
 						<span>
